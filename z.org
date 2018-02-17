@@ -35,7 +35,6 @@ A location where emacs looks for files to load when using =require= (=describe-v
 
 Note that auto-complete can be used as an alternative to company
 
-** commands
 | Command       | key     | Description               |
 |---------------+---------+---------------------------|
 |               | SPC i s | Insert snippet from helm  |
@@ -45,7 +44,7 @@ Note that auto-complete can be used as an alternative to company
   
 * Flycheck
 
-Prefix is **e**
+Prefix is *e*
 
 ** Primary commands
 
@@ -139,6 +138,8 @@ Prefix is **e**
 
 * Documentation
 
+Install docsets via =helm-dash-install-doc-set=
+
 Documentation is provided by
 - dash.el
 - helm-dash
@@ -148,7 +149,7 @@ Documentation is provided by
 | SPC d h | helm dash at point |
 | SPC d d | dash at point      |
 
-install docsets via =helm-dash-install-doc-set=
+
 * Ace Window
 | Command    | Key | Description             |
 |------------+-----+-------------------------|

@@ -1,0 +1,154 @@
+* emacs
+| command              | description                   | notes                           |
+|----------------------+-------------------------------+---------------------------------|
+| what-cursor-position | face info of current position | C-u gives many additional infos |
+|                      |                               |                                 |
+
+** load-path 
+A location where emacs looks for files to load when using =require= (=describe-variable load-path=)
+
+* spacemacs
+** packages are loaded alphabetically =with-eval-after-load= magic needed
+** layer/init-xxx usually only contains use-package macro
+
+
+* helm
+** minibuffer
+| key | description               |
+|-----+---------------------------|
+| c-y | paste into the minibuffer |
+|     |                           |
+
+** Secondary
+| command              | description                                         |
+|----------------------+-----------------------------------------------------|
+| spacemacs/helm-faces | see all spacemacs and gives the option to configure |
+| foo                  |                                                     |
+|                      |                                                     |
+
+* autocomplete
+| command | description        |
+|---------+--------------------|
+| C-j     | next-candidate     |
+| C-k     | previous-candidate |
+| *c-l*   | complete selection |
+|         |                    |
+
+* yasnippet
+
+Note that auto-complete can be used as an alternative to company
+
+** commands
+| command | description              |
+|---------+--------------------------|
+| SPC i s | insert snippet from helm |
+| M-l     | hippie expand            |
+
+* projectile
+  
+| c-x |   |   |
+|-----+---+---|
+|     |   |   |
+|     |   |   |
+|     |   |   |
+|     |   |   |
+|     |   |   |
+|     |   |   |
+|     |   |   |
+|     |   |   |
+|     |   |   |
+|     |   |   |
+|     |   |   |
+|     |   |   |
+|     |   |   |
+|     |   |   |
+|     |   |   |
+|     |   |   |
+|     |   |   |
+|     |   |   |
+|     |   |   |
+
+* flycheck
+prefix is '**e**'
+
+** primary commands
+
+| keymap  | description                  | notes             |
+|---------+------------------------------+-------------------|
+| spc e h | describe flycheck checker    |                   |
+| spc e l | display a list of all errors |                   |
+| spc e v | verify setup                 |                   |
+| spc e n | next error                   |                   |
+| spc e p | previous error               |                   |
+| spc e s | select checker               | e.g. gcc vs clang |
+| spc e e | describe error at point      |                   |
+
+** useful links
+| description                                          | link |
+|------------------------------------------------------+------|
+| list of supported languages and checkers             | [[http://www.flycheck.org/en/latest/languages.html#flycheck-languages][link]] |
+| list of recommended packages for additional features | [[http://www.flycheck.org/en/latest/community/extensions.html#c-c-objective-c][link]] |
+|                                                      |      |
+** secondary commands
+| command                 | description                                                             |
+|-------------------------+-------------------------------------------------------------------------|
+| flycheck-verify-checker | check if a particular checker (e.g. clang) is available and can be used |
+| hoo                     |                                                                         |
+** package configuration
+| configuration              | description                                    |
+|----------------------------+------------------------------------------------|
+| flycheck-idle-change-delay | do syntac check after idle this amount of secs |
+|                            |                                                |
+
+* to document
+** DONE flycheck
+   CLOSED: [2018-02-16 Fri 04:03]
+** projectile
+** orgmode [[https://github.com/syl20bnr/spacemacs/tree/master/layers/%252Bemacs/org][link]] 
+** helm
+** ibuffer [[https://github.com/syl20bnr/spacemacs/tree/master/layers/%252Bemacs/ibuffer][link]] (later)
+** git [[https://github.com/syl20bnr/spacemacs/tree/master/layers/%252Bsource-control/git][link]]
+* modes
+** c-mode
+*** prerequiestes
+- gnu global compiled with universal ctags
+* navigation
+** [[https://github.com/syl20bnr/spacemacs/tree/master/layers/%252Btags/cscope][check cscope]]
+** gtags
+| command         | description                       |
+|-----------------+-----------------------------------|
+| M-x ^helm-gtags | create tags                       |
+| SPC m g c       | create tags                       |
+| SPC m g d       | find definiton                    |
+| SPC m g G       | find definiton based on context   |
+| SPC m g i       | list tags in current function     |
+| SPC m g I       | list tags in current file         |
+| *SPC m g n*     | go to next tag in history         |
+| *SPC m g p*     | go to previous tag in history     |
+| *SPC m g r*     | find rtags (reverse tags or uses) |
+| SPC m g R       | resume helm session               |
+| SPC m g S       | show stack of visited location    |
+| SPC m g s       | apropos project tags              |
+| *SPC m g u*     | update tags                       |
+** imenu-list
+| command | description                         |
+|---------+-------------------------------------|
+| SPC b i | toggle imenu                        |
+| q       | quit imenu buffer                   |
+| RET     | go to entry                         |
+| d       | display entry (keep focus on imenu) |
+| f       | fold/unfold                         |
+|         |                                     |
+* documentation
+Documentation is provided by
+- dash.el
+- helm-dash
+| command | description        |
+|---------+--------------------|
+| SPC d h | helm dash at point |
+| SPC d d | dash at point      |
+|         |                    |
+
+install docsets via =helm-dash-install-doc-set=
+
+

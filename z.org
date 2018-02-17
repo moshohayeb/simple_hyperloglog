@@ -3,14 +3,13 @@
 |----------------------+-----+-------------------------------+---------------------------------|
 | what-cursor-position |     | face info of current position | C-u gives many additional infos |
 
-** load-path 
+** Emacs =load-path=
 
 A location where emacs looks for files to load when using =require= (=describe-variable load-path=)
 
 * Spacemacs
-
-** packages are loaded alphabetically =with-eval-after-load= magic needed
-** layer/init-xxx usually only contains use-package macro
+- packages are loaded alphabetically, =with-eval-after-load= magic might be needed for proper management
+- layer/init-xxx usually only contains use-package macro
 
 * Helm
 ** TODO Minibuffer
@@ -20,42 +19,45 @@ A location where emacs looks for files to load when using =require= (=describe-v
 | helm-kill-selection-and-quit | C-u C-c C-k | Copy helm selection to clipboard    |
 
 ** Secondary
-| Command              | Key | Description                                         |
-|----------------------+-----+-----------------------------------------------------|
-| spacemacs/helm-faces |     | see all spacemacs and gives the option to configure |
+| Command              | Key | Description                                               |
+|----------------------+-----+-----------------------------------------------------------|
+| spacemacs/helm-faces |     | See all spacemacs faces and gives the option to configure |
+|                      |     |                                                           |
 
 * Autocomplete
-| command | Description        |
-|---------+--------------------|
-| C-j     | next-candidate     |
-| C-k     | previous-candidate |
-| *c-l*   | complete selection |
+| Command | Key   | Description        |
+|---------+-------+--------------------|
+|         | C-j   | Next candidate    |
+|         | C-k   | Previous candidate |
+|         | *C-l* | Complete selection |
 
 * Yasnippet
 
 Note that auto-complete can be used as an alternative to company
 
 ** commands
-| command | Description              |
-|---------+--------------------------|
-| SPC i s | insert snippet from helm |
-| M-l     | hippie expand            |
+| Command       | key     | Description               |
+|---------------+---------+---------------------------|
+|               | SPC i s | Insert snippet from helm  |
+| hippie-expand | M-l     | Expand using hippe-expand |
 
 * Projectile
   
 * Flycheck
+
 Prefix is **e**
+
 ** Primary commands
 
-| keymap  | Description                  | notes             |
-|---------+------------------------------+-------------------|
-| SPC e h | describe flycheck checker    |                   |
-| SPC e l | display a list of all errors |                   |
-| SPC e v | verify setup                 |                   |
-| SPC e n | next error                   |                   |
-| SPC e p | previous error               |                   |
-| SPC e s | select checker               | e.g. gcc vs clang |
-| SPC e e | describe error at point      |                   |
+| Command | Key     | Description                  | Notes             |
+|---------+---------+------------------------------+-------------------|
+|         | SPC e h | Describe flycheck checker    |                   |
+|         | SPC e l | Display a list of all errors |                   |
+|         | SPC e v | Verify setup                 |                   |
+|         | SPC e n | Next error                   |                   |
+|         | SPC e p | Previous error               |                   |
+|         | SPC e s | Select checker               | e.g. gcc vs clang |
+|         | SPC e e | Describe error at point      |                   |
 
 ** Useful links
 | Description                                          | link |
@@ -64,13 +66,12 @@ Prefix is **e**
 | list of recommended packages for additional features | [[http://www.flycheck.org/en/latest/community/extensions.html#c-c-objective-c][link]] |
 
 ** Secondary commands
-| command                 | Description                                                             |
+| Command                 | Description                                                             |
 |-------------------------+-------------------------------------------------------------------------|
-| flycheck-verify-checker | check if a particular checker (e.g. clang) is available and can be used |
-| hoo                     |                                                                         |
+| flycheck-verify-checker | Check if a particular checker (e.g. clang) is available and can be used |
 
 ** Package configuration
-| configuration              | Description                                    |
+| Configuration              | Description                                    |
 |----------------------------+------------------------------------------------|
 | flycheck-idle-change-delay | do syntac check after idle this amount of secs |
 
@@ -113,33 +114,35 @@ Prefix is **e**
 ** gtags
 | command         | Description                       |
 |-----------------+-----------------------------------|
-| M-x ^helm-gtags | create tags                       |
-| SPC m g c       | create tags                       |
-| SPC m g d       | find definiton                    |
-| SPC m g G       | find definiton based on context   |
-| SPC m g i       | list tags in current function     |
-| SPC m g I       | list tags in current file         |
-| *SPC m g n*     | go to next tag in history         |
-| *SPC m g p*     | go to previous tag in history     |
-| *SPC m g r*     | find rtags (reverse tags or uses) |
-| SPC m g R       | resume helm session               |
-| SPC m g S       | show stack of visited location    |
-| SPC m g s       | apropos project tags              |
-| *SPC m g u*     | update tags                       |
+| M-x ^helm-gtags |                                   |
+| SPC m g c       | Create tags                       |
+| SPC m g d       | Find definiton                    |
+| SPC m g G       | Find definiton based on context   |
+| SPC m g i       | List tags in current function     |
+| SPC m g I       | List tags in current file         |
+| *SPC m g n*     | Go to next tag in history         |
+| *SPC m g p*     | Go to previous tag in history     |
+| *SPC m g r*     | Find rtags (reverse tags or uses) |
+| SPC m g R       | Resume helm session               |
+| SPC m g S       | Show stack of visited location    |
+| SPC m g s       | Apropos project tags              |
+| *SPC m g u*     | Update tags                       |
 
 ** imenu-list
 | command | Description                         |
 |---------+-------------------------------------|
-| SPC b i | toggle imenu                        |
-| q       | quit imenu buffer                   |
-| RET     | go to entry                         |
-| d       | display entry (keep focus on imenu) |
-| f       | fold/unfold                         |
+| SPC b i | Toggle imenu                        |
+| q       | Quit imenu buffer                   |
+| RET     | Go to entry                         |
+| d       | Display entry (keep focus on imenu) |
+| f       | Fold/unfold                         |
 
 * Documentation
+
 Documentation is provided by
 - dash.el
 - helm-dash
+ 
 | Command | Description        |
 |---------+--------------------|
 | SPC d h | helm dash at point |
@@ -160,3 +163,6 @@ When selecting a window to activate, a one of the following chars can be entered
 | ~          | b   | Split horizontally      |
 | ~          | o   | Maximize current window |
 | ~          | ?   | Help                    |
+
+
+

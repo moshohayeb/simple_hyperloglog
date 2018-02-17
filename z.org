@@ -1,12 +1,14 @@
 * TODO Emacs
-| Command              | Description                   | Note                            |
-|----------------------+-------------------------------+---------------------------------|
-| what-cursor-position | face info of current position | C-u gives many additional infos |
+| Command              | Key | Description                   | Note                            |
+|----------------------+-----+-------------------------------+---------------------------------|
+| what-cursor-position |     | face info of current position | C-u gives many additional infos |
 
 ** load-path 
+
 A location where emacs looks for files to load when using =require= (=describe-variable load-path=)
 
 * Spacemacs
+
 ** packages are loaded alphabetically =with-eval-after-load= magic needed
 ** layer/init-xxx usually only contains use-package macro
 
@@ -18,13 +20,12 @@ A location where emacs looks for files to load when using =require= (=describe-v
 | helm-kill-selection-and-quit | C-u C-c C-k | Copy helm selection to clipboard    |
 
 ** Secondary
-| command              | description                                         |
-|----------------------+-----------------------------------------------------|
-| spacemacs/helm-faces | see all spacemacs and gives the option to configure |
-| foo                  |                                                     |
+| Command              | Key | Description                                         |
+|----------------------+-----+-----------------------------------------------------|
+| spacemacs/helm-faces |     | see all spacemacs and gives the option to configure |
 
 * Autocomplete
-| command | description        |
+| command | Description        |
 |---------+--------------------|
 | C-j     | next-candidate     |
 | C-k     | previous-candidate |
@@ -35,7 +36,7 @@ A location where emacs looks for files to load when using =require= (=describe-v
 Note that auto-complete can be used as an alternative to company
 
 ** commands
-| command | description              |
+| command | Description              |
 |---------+--------------------------|
 | SPC i s | insert snippet from helm |
 | M-l     | hippie expand            |
@@ -46,30 +47,30 @@ Note that auto-complete can be used as an alternative to company
 Prefix is **e**
 ** Primary commands
 
-| keymap  | description                  | notes             |
+| keymap  | Description                  | notes             |
 |---------+------------------------------+-------------------|
-| spc e h | describe flycheck checker    |                   |
-| spc e l | display a list of all errors |                   |
-| spc e v | verify setup                 |                   |
-| spc e n | next error                   |                   |
-| spc e p | previous error               |                   |
-| spc e s | select checker               | e.g. gcc vs clang |
-| spc e e | describe error at point      |                   |
+| SPC e h | describe flycheck checker    |                   |
+| SPC e l | display a list of all errors |                   |
+| SPC e v | verify setup                 |                   |
+| SPC e n | next error                   |                   |
+| SPC e p | previous error               |                   |
+| SPC e s | select checker               | e.g. gcc vs clang |
+| SPC e e | describe error at point      |                   |
 
 ** Useful links
-| description                                          | link |
+| Description                                          | link |
 |------------------------------------------------------+------|
 | list of supported languages and checkers             | [[http://www.flycheck.org/en/latest/languages.html#flycheck-languages][link]] |
 | list of recommended packages for additional features | [[http://www.flycheck.org/en/latest/community/extensions.html#c-c-objective-c][link]] |
 
 ** Secondary commands
-| command                 | description                                                             |
+| command                 | Description                                                             |
 |-------------------------+-------------------------------------------------------------------------|
 | flycheck-verify-checker | check if a particular checker (e.g. clang) is available and can be used |
 | hoo                     |                                                                         |
 
 ** Package configuration
-| configuration              | description                                    |
+| configuration              | Description                                    |
 |----------------------------+------------------------------------------------|
 | flycheck-idle-change-delay | do syntac check after idle this amount of secs |
 
@@ -110,7 +111,7 @@ Prefix is **e**
 * Navigation
 ** [[https://github.com/syl20bnr/spacemacs/tree/master/layers/%252Btags/cscope][check cscope]]
 ** gtags
-| command         | description                       |
+| command         | Description                       |
 |-----------------+-----------------------------------|
 | M-x ^helm-gtags | create tags                       |
 | SPC m g c       | create tags                       |
@@ -127,18 +128,19 @@ Prefix is **e**
 | *SPC m g u*     | update tags                       |
 
 ** imenu-list
-| command | description                         |
+| command | Description                         |
 |---------+-------------------------------------|
 | SPC b i | toggle imenu                        |
 | q       | quit imenu buffer                   |
 | RET     | go to entry                         |
 | d       | display entry (keep focus on imenu) |
 | f       | fold/unfold                         |
+
 * Documentation
 Documentation is provided by
 - dash.el
 - helm-dash
-| command | description        |
+| Command | Description        |
 |---------+--------------------|
 | SPC d h | helm dash at point |
 | SPC d d | dash at point      |
@@ -158,6 +160,3 @@ When selecting a window to activate, a one of the following chars can be entered
 | ~          | b   | Split horizontally      |
 | ~          | o   | Maximize current window |
 | ~          | ?   | Help                    |
-
-
-

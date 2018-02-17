@@ -2,7 +2,6 @@
 | Command              | Description                   | Note                            |
 |----------------------+-------------------------------+---------------------------------|
 | what-cursor-position | face info of current position | C-u gives many additional infos |
-|                      |                               |                                 |
 
 ** load-path 
 A location where emacs looks for files to load when using =require= (=describe-variable load-path=)
@@ -10,20 +9,19 @@ A location where emacs looks for files to load when using =require= (=describe-v
 * Spacemacs
 ** packages are loaded alphabetically =with-eval-after-load= magic needed
 ** layer/init-xxx usually only contains use-package macro
+
 * Helm
 ** TODO Minibuffer
 | Command                      | Key         | Description                         |
 |------------------------------+-------------+-------------------------------------|
 | helm-yank-selection          | C-y         | Paste clipboard into the minibuffer |
 | helm-kill-selection-and-quit | C-u C-c C-k | Copy helm selection to clipboard    |
-|                              |             |                                     |
 
 ** Secondary
 | command              | description                                         |
 |----------------------+-----------------------------------------------------|
 | spacemacs/helm-faces | see all spacemacs and gives the option to configure |
 | foo                  |                                                     |
-|                      |                                                     |
 
 * Autocomplete
 | command | description        |
@@ -31,7 +29,6 @@ A location where emacs looks for files to load when using =require= (=describe-v
 | C-j     | next-candidate     |
 | C-k     | previous-candidate |
 | *c-l*   | complete selection |
-|         |                    |
 
 * Yasnippet
 
@@ -45,28 +42,6 @@ Note that auto-complete can be used as an alternative to company
 
 * Projectile
   
-| c-x |   |   |
-|-----+---+---|
-|     |   |   |
-|     |   |   |
-|     |   |   |
-|     |   |   |
-|     |   |   |
-|     |   |   |
-|     |   |   |
-|     |   |   |
-|     |   |   |
-|     |   |   |
-|     |   |   |
-|     |   |   |
-|     |   |   |
-|     |   |   |
-|     |   |   |
-|     |   |   |
-|     |   |   |
-|     |   |   |
-|     |   |   |
-
 * Flycheck
 Prefix is **e**
 ** Primary commands
@@ -86,17 +61,17 @@ Prefix is **e**
 |------------------------------------------------------+------|
 | list of supported languages and checkers             | [[http://www.flycheck.org/en/latest/languages.html#flycheck-languages][link]] |
 | list of recommended packages for additional features | [[http://www.flycheck.org/en/latest/community/extensions.html#c-c-objective-c][link]] |
-|                                                      |      |
+
 ** Secondary commands
 | command                 | description                                                             |
 |-------------------------+-------------------------------------------------------------------------|
 | flycheck-verify-checker | check if a particular checker (e.g. clang) is available and can be used |
 | hoo                     |                                                                         |
+
 ** Package configuration
 | configuration              | description                                    |
 |----------------------------+------------------------------------------------|
 | flycheck-idle-change-delay | do syntac check after idle this amount of secs |
-|                            |                                                |
 
 * To Document
 - projectile
@@ -119,7 +94,7 @@ Prefix is **e**
 | Command                     | Key | Description               |
 |-----------------------------+-----+---------------------------|
 | srefactor-refactor-at-point | , r | Refactor symbol at cursor |
-|                             |     |                           |
+
 ** Notes
 - Used mode is =c-mode-map=
 
@@ -131,7 +106,6 @@ Prefix is **e**
 | Command               | Keybinding | Description                         |
 |-----------------------+------------+-------------------------------------|
 | org-cycle-list-bullet | ¬†   -      | change list format (bullet/numbers) |
-|                       |            |                                     |
 
 * Navigation
 ** [[https://github.com/syl20bnr/spacemacs/tree/master/layers/%252Btags/cscope][check cscope]]
@@ -151,6 +125,7 @@ Prefix is **e**
 | SPC m g S       | show stack of visited location    |
 | SPC m g s       | apropos project tags              |
 | *SPC m g u*     | update tags                       |
+
 ** imenu-list
 | command | description                         |
 |---------+-------------------------------------|
@@ -159,7 +134,6 @@ Prefix is **e**
 | RET     | go to entry                         |
 | d       | display entry (keep focus on imenu) |
 | f       | fold/unfold                         |
-|         |                                     |
 * Documentation
 Documentation is provided by
 - dash.el
@@ -168,7 +142,6 @@ Documentation is provided by
 |---------+--------------------|
 | SPC d h | helm dash at point |
 | SPC d d | dash at point      |
-|         |                    |
 
 install docsets via =helm-dash-install-doc-set=
 * Ace Window
